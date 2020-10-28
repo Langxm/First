@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".InfoActivity">
 
+
+
     <FrameLayout
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/backgr"
         android:layout_above="@id/tab_menu"
         android:layout_marginBottom="2dp" />
 
@@ -22,26 +26,30 @@
         android:layout_alignParentBottom="true">
 
         <TextView
+
+            android:id="@+id/txt_zx"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="课程"/>
+            android:drawableTop="@mipmap/ic_course"
+            android:text="高数"/>
 
         <TextView
-
+            android:id="@+id/btn_xt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/information"
             android:drawablePadding="3dp"
             android:gravity="center"
-            android:text="习题"/>
+            android:drawableTop="@mipmap/ic_exercise_bg_1"
+            android:text="英语单词"/>
 
 
 
         <TextView
-            android:id="@+id/txt_find"
+            android:id="@+id/btn_kc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -49,7 +57,7 @@
             android:drawablePadding="3dp"
 
             android:gravity="center"
-
+            android:drawableTop="@mipmap/ic_message"
             android:text="资讯"/>
 
         <TextView
@@ -57,11 +65,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-             android:drawableTop="@drawable/me"
+             android:drawableTop="@mipmap/ic_exercise"
             android:drawablePadding="3dp"
 
-            android:layout_gravity="bottom"
-            android:gravity="right"
+
+            android:gravity="center"
 
 
 

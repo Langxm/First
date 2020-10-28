@@ -44,7 +44,7 @@ public class LoginInterface extends AppCompatActivity {
             Toast.makeText(this,"用户名和密码都不能为空",Toast.LENGTH_LONG).show();
             return;
         }
-        if("android".equals(username) && "123456".equals(password)){
+        if("123".equals(username) && "123".equals(password)){
             Toast.makeText(this,"登陆成功",Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(this,InfoActivity.class);

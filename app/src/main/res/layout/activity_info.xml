@@ -5,95 +5,142 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginInterface">
+    tools:context=".InfoActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="163dp"
-        android:layout_height="143dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_launcher_foreground" />
+        <ImageView
+            android:id="@+id/iv_head_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/avatar"/>
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="用户名">
 
-    <TableRow
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="20dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/et_username"
-            android:hint="姓名"
-            android:textSize="26sp" />
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textSize="40dp"></TextView>
+
+        <EditText
+            android:id="@+id/et_realname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="性别"
-            android:textSize="26sp"/>
-
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp">
-        <CheckBox
-            android:id="@+id/cb_java_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Java面向对象"
-            android:textSize="26sp">
-        </CheckBox>
-
+            android:maxLength="8"
+            android:textSize="30sp"></EditText>
     </LinearLayout>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp">
-        <CheckBox
-            android:id="@+id/cb_android_login"
+        android:layout_marginTop="10dp">
+        <RadioGroup
+            android:id="@+id/group_sex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="android项目开发"
-            android:textSize="26sp">
-        </CheckBox>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp">
-        <CheckBox
-            android:id="@+id/cb_db_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="数据库管理"
-            android:textSize="26sp">
-        </CheckBox>
-
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="熟练度"
+                android:textSize="30dp">
+            </TextView>
+            <RadioButton
+                android:id="@+id/rbtn_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新手"
+                android:textSize="30sp">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbtn_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="老手"
+                android:textSize="30sp">
+            </RadioButton>
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
-        <Button
-            android:id="@+id/btn_ok_login"
-            android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#EF7838"
-            android:textColor="#FFF"
-            android:text="确定"
-            android:textSize="32sp">
-        </Button>
+            android:text="想要进入的版块"
+            android:textSize="30dp">
+        </TextView>
+        <CheckBox
+            android:id="@+id/cb_java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="高数"
+            android:textSize="30sp">
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/cb_android"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="英语"
+            android:textSize="30sp">
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/cb_database"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="计算机"
+            android:textSize="30sp">
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/cb_database1"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="语文"
+            android:textSize="30sp">
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/cb_database2"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="科技"
+            android:textSize="30sp">
+        </CheckBox>
     </LinearLayout>
 
 
-
-
-
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:background="#00CC00"
+        android:text="确认"/>
 
 </LinearLayout>
